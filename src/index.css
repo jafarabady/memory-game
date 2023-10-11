@@ -1,3 +1,14 @@
+@font-face {
+    font-family: "Lalezar";
+    src: url("../public/font/Lalezar-Font/TTF/Lalezar-Regular.ttf");
+}
+
 #root {
-    min-height: 100vh;
+    min-height: 98vh;
+    background: #e7e7e7;
+    margin: 0%;
+    padding: 0%;
+}
+* {
+    font-family: Lalezar;
 }

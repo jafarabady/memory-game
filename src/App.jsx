@@ -26,7 +26,7 @@ function App() {
     const [selectedItemIds, setSelectedItemIds] = useState([]);
     const [numberClick, setNumberClick] = useState(0);
     const [numberClick2, setNumberClick2] = useState(40);
-    const [time, setTime] = useState(120)
+    const [time, setTime] = useState(4)
     const [isRunning, setIsRunning] = useState(false)
 
     useEffect(() => {
@@ -42,6 +42,11 @@ function App() {
             clearInterval(timer);
         };
     }, [isRunning])
+    useEffect(() => {
+        if (time < 0 || numberClick2 < 0) {
+            loseGame();
+        }
+    }, [time, numberClick2]);
     const formatTime = () => {
         if (time > 0) {
             const minutes = Math.floor(time / 60);
@@ -81,15 +86,17 @@ function App() {
                 }
             }
         } else {
-                alert('sorry u lose :(')
-                setIsRunning(false)
-                setNumberClick2(0)
             }
     };
+    const loseGame = ()=>{
+            alert('sorry u lose :(')
+            setIsRunning(false)
+            setNumberClick2(0)
+    }
 
     const resetGame = () => {
         setIsRunning(true)
-        setTime(120)
+        setTime(4)
         setNumberClick2(40)
         const newItems = generateRandom()
         setSelectedItemIds(newItems.map((i) => i.id));

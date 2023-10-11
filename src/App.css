@@ -1,11 +1,17 @@
-.game-box{
+.game-box {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  background: #ffffff;
   gap: 30px;
-  width: 23%;
+  width: 550px;
+  height: 691px;
   margin: auto;
+  border-radius: 5px;
+  position: absolute;
+  left: 689px;
+  top: 100px;
 }
 .memory-game {
   gap: 10px;
@@ -17,11 +23,11 @@
 .memory-game__item {
   width: 100px;
   height: 100px;
-  background-color: red;
+  background-color: #dc3755;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: wheat;
+  color: rgb(255, 242, 218);
   font-size: 30px;
   border-radius: 5px;
   overflow: hidden;
@@ -32,8 +38,18 @@
   height: 100%;
   object-fit: cover;
 }
-.time-move{
+.time-move {
   display: flex;
   justify-content: space-between;
-  width: 100%;
+  width: 430px;
+  font-size: 30px;
+}
+
+.btn-reset {
+  width: 160px;
+  height: 50px;
+  border-radius: 5px;
+  background: #F2C94C;
+  border: none;
+  font-size: 24px;
 }
