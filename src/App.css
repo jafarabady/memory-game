@@ -1,0 +1,39 @@
+.game-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  width: 23%;
+  margin: auto;
+}
+.memory-game {
+  gap: 10px;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.memory-game__item {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: wheat;
+  font-size: 30px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.memory-game__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.time-move{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
