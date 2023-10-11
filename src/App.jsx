@@ -26,7 +26,7 @@ function App() {
     const [selectedItemIds, setSelectedItemIds] = useState([]);
     const [numberClick, setNumberClick] = useState(0);
     const [numberClick2, setNumberClick2] = useState(40);
-    const [time, setTime] = useState(4)
+    const [time, setTime] = useState(120)
     const [isRunning, setIsRunning] = useState(false)
 
     useEffect(() => {
@@ -96,7 +96,7 @@ function App() {
 
     const resetGame = () => {
         setIsRunning(true)
-        setTime(4)
+        setTime(120)
         setNumberClick2(40)
         const newItems = generateRandom()
         setSelectedItemIds(newItems.map((i) => i.id));
