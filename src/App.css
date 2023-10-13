@@ -38,8 +38,13 @@
   font-size: 30px;
   border-radius: 5px;
   overflow: hidden;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
 }
-
+.memory-game__item.flipped{
+  transform: rotateY(180deg);
+}
 .memory-game__item img {
   width: 100%;
   height: 100%;
