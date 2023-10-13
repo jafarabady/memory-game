@@ -101,12 +101,13 @@ function App() {
 
         }
         if (selectedItemIds.length >= 15) {
-
-            showWinAlert();
-            setIsRunning(false)
+            winGame()
         }
     }
-
+    function winGame(){
+        showWinAlert()
+        setIsRunning(false)
+    }
 
     function showLoseAlert() {
         Swal.fire({
