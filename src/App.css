@@ -56,16 +56,42 @@
   width: 430px;
   font-size: 30px;
 }
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
 
+}
 .btn-reset {
   width: 160px;
   height: 50px;
   border-radius: 5px;
-  background: #F2C94C;
+  background: #f2c94c;
   border: none;
   font-size: 24px;
-}
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
 
+}
+.btn_stop_game {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f2c94c;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.icon-stop {
+  width: 25px;
+  height: 25px;
+}
 .icon_dark_mode {
   width: 100px;
   height: 30px;

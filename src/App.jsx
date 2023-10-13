@@ -12,6 +12,9 @@ import "./App.css";
 import Item from "./components/Item";
 import {FaMoon, FaRegSun} from "react-icons/fa";
 import useDarkMode from "@/components/useDarkMode.jsx";
+import {RiRestartFill} from "react-icons/ri";
+import {BsFillStopCircleFill} from "react-icons/bs";
+import {VscDebugStart} from "react-icons/vsc";
 
 const images = [
     image1Url,
@@ -146,6 +149,16 @@ function App() {
 
         }, 2000);
     }
+    const stopGame = () => {
+        setIsRunning(false);
+        setStartGame(false)
+    };
+    const playGame = () => {
+        if(time !== 120) {
+            setIsRunning(true);
+            setStartGame(true)
+        }
+    };
     return (
         <div
             id="root"
@@ -196,9 +209,18 @@ function App() {
                         />
                     ))}
                 </div>
-                <button className="btn-reset" onClick={resetGame}>
-                    Start
-                </button>
+                <div className="btn">
+                    <button className="btn_stop_game" onClick={playGame}>
+                        <VscDebugStart className="icon-stop" />
+                    </button>
+                    <button className="btn_stop_game" onClick={stopGame}>
+                        <BsFillStopCircleFill className="icon-stop" />
+                    </button>
+                    <button className="btn-reset" onClick={resetGame}>
+                        <RiRestartFill />
+                        شروع دوباره
+                    </button>
+                </div>
             </div>
         </div>
     );
