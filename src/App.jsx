@@ -35,7 +35,6 @@ function App() {
     const [isMoon, setIsMoon] = useState(false);
 
 
-
     const toggleIcons = () => {
         setIsSun(!isSun);
         setIsMoon(!isMoon);
@@ -86,7 +85,6 @@ function App() {
                 setSelectedItemIds([...selectedItemIds, item.id]);
             }
             setNumberClick(numberClick + 1);
-
             if (selectedItemIds.length % 2 !== 0) {
                 const lastItemId = selectedItemIds[selectedItemIds.length - 1];
                 const lastItem = items.find((item) => item.id === lastItemId);
@@ -102,10 +100,10 @@ function App() {
             }
 
         }
-        console.log(selectedItemIds);
         if (selectedItemIds.length >= 15) {
-            console.log("win");
+
             showWinAlert();
+            setIsRunning(false)
         }
     }
 
@@ -127,6 +125,7 @@ function App() {
             confirmButtonText: "حله",
         });
     }
+
     const loseGame = () => {
         showLoseAlert()
         setIsRunning(false)
@@ -143,7 +142,7 @@ function App() {
         setTimeout(() => {
             setSelectedItemIds([])
 
-        }, 1000);
+        }, 2000);
     }
     return (
         <div
