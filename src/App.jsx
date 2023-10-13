@@ -174,7 +174,7 @@ function App() {
                             transition: ".2s all",
                         }}
                     >
-                        زمان : {time > 0 ? formatTime() : "0:00"}
+                        time: {time > 0 ? formatTime() : "0:00"}
                     </div>
                     <div
                         style={{
@@ -182,7 +182,7 @@ function App() {
                             transition: ".2s all",
                         }}
                     >
-                        تعداد حرکت : {numberClick2}
+                        moves: {numberClick2}
                     </div>
                 </div>
                 <div className="memory-game">
@@ -197,7 +197,7 @@ function App() {
                     ))}
                 </div>
                 <button className="btn-reset" onClick={resetGame}>
-                    شروع دوباره
+                    Start
                 </button>
             </div>
         </div>
